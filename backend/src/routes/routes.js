@@ -1,73 +1,71 @@
-const { Router } = require('express');
+const { Router } = require("express");
 const router = Router();
 
-const mysqlConnection = require('../db/db');
-
+const mysqlConnection = require("../db/db");
 
 //Peticion get - lectura de datos
-router.get('/login', (req,res) => {
-  mysqlConnection.query('SELECT * FROM usuario', (err,rows,fields) => {
-     if(!err)
-     {
-       res.json(rows);
-     }else{
-       console.log(err);
-     }
+router.get("/usuarios", (req, res) => {
+  mysqlConnection.query("SELECT * FROM usuario", (err, rows, fields) => {
+    if (!err) {
+      res.json(rows);
+    } else {
+      console.log(err);
+    }
   });
 });
 
 //
-router.post('/crear_cuenta', (req, res) => {
-    const {correo,nombre,contraseña} = req.body
+router.post("/usuarios", (req, res) => {
+  const { correo, nombre, contraseña } = req.body;
 
-    let cuenta = [correo,nombre,contraseña];
+  let cuenta = [correo, nombre, contraseña];
 
-    let nuevaCuenta = `
-INSERT INTO usuario(correo,nombre,contraseña)
-VALUES (?,?,?);`
+  let nuevaCuenta = `INSERT INTO usuario(correo,nombre,contraseña)
+    VALUES (?,?,?);`;
 
-   mysqlConnection.query(nuevaCuenta,cuenta, (err,results,fields) => {
-     if(err){
-       return console.error(err.message);
-     }
-     res.json({message:`usuario creado`})
-   });
+  mysqlConnection.query(nuevaCuenta, cuenta, (err, results, fields) => {
+    if (err) {
+      console.error(err.message);
+    }
+    return res.json({ message: 'usuario creado', success: true, status: 201 }).status(201);
   });
-
+});
 
 //Peticion post - creación de datos
 
-router.post('/crear_foro', (req, res) => {
-    const {codigo,titulo,comentario,creador} = req.body
+router.post("/foro", (req, res) => {
+  const { codigo, titulo, comentario, creador } = req.body;
 
-    let foro = [codigo,titulo,comentario,creador];
+  let foro = [codigo, titulo, comentario, creador];
 
-    let nuevoForo = `
+  let nuevoForo = `
 INSERT INTO foro(codigo,titulo,comentario,creador)
-VALUES (?,?,?,?);`
+VALUES (?,?,?,?);`;
 
-   mysqlConnection.query(nuevoForo,foro, (err,results,fields) => {
-     if(err){
-       return console.error(err.message);
-     }
-     res.json({message:`foro creado`})
-   });
+  mysqlConnection.query(nuevoForo, foro, (err, results, fields) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    res.json({ message: `foro creado` });
   });
+});
 
 //Petición put -- Modificar datos
 
-
-
 // Delete
 
-router.delete('/eliminar_cuenta/:id', (req,res) => {
-    const { id } = req.params;
-    mysqlConnection.query(`DELETE FROM usuario WHERE correo =?`,[id],(err,rows,fields) => {
-      if("err"){
-        res.json({status: `usuario ha sido eliminado`})
-      }else{
+router.delete("/usuarios/:id", (req, res) => {
+  const { id } = req.params;
+  mysqlConnection.query(
+    `DELETE FROM usuario WHERE correo =?`,
+    [id],
+    (err, rows, fields) => {
+      if ("err") {
+        res.json({ status: `usuario ha sido eliminado` });
+      } else {
         console.log(err);
       }
-    })
-  })
-module.exports=router;
+    }
+  );
+});
+module.exports = router;

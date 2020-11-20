@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
 
+
 const InicioSesion = (props) => {
+  const initalState = {
+    name:"",
+    correo: "",
+    contraseña:""
+  }
+  const[usuario, setUsuario] = useState(initalState)
+
+  function handlerChange(e){
+    setUsuario({...usuario, [e.target.name] : e.target.value})
+  }
+
+  function submitData(e){
+    e.preventDefault()
+    fetch('http://localhost:3001/api/usuarios', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(usuario)
+    })
+  }
+
 const {history} = props;
   return (
     <div>
@@ -12,15 +35,30 @@ const {history} = props;
       <p>
         Recuerda llenar <code>todos</code> los datos.
       </p>
-      <form action="/action_page.php" className="was-validated">
+      <form  onSubmit={submitData} className="was-validated" >
+        <div className="form-group">
+          <label for="uname">nombre</label>
+          <input
+            type="text"
+            className="form-control"
+            id="uname"
+            placeholder="Enter name"
+            name="nombre"
+            onChange={(e) => handlerChange(e)}
+            required
+          />
+          <div className="valid-feedback">Valido</div>
+          <div className="invalid-feedback">Por favor completar este campo</div>
+        </div>
         <div className="form-group">
           <label for="uname">Correo</label>
           <input
             type="text"
             className="form-control"
             id="uname"
-            placeholder="Enter username"
-            name="uname"
+            placeholder="Enter email"
+            name="correo"
+            onChange={(e) => handlerChange(e)}
             required
           />
           <div className="valid-feedback">Valido</div>
@@ -33,7 +71,8 @@ const {history} = props;
             className="form-control"
             id="pwd"
             placeholder="Enter password"
-            name="pswd"
+            name="contraseña"
+            onChange={(e) => handlerChange(e)}
             required
           />
           <div className="valid-feedback">Valido</div>
@@ -43,7 +82,7 @@ const {history} = props;
         <button
           type="submit" 
           className="btn btn-primary"
-          onClick={() => history.push("/Inicio")}
+          // onClick={() => history.push("/Inicio")}
 
         >
           Submit
