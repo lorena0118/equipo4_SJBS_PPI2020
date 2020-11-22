@@ -51,7 +51,6 @@ VALUES (?,?,?,?);`;
 });
 
 //Petición put -- Modificar datos
-
 router.put('/Modificar/:id', (req,res) => {
   const { nombre } = req.body
   const { id } = req.params 
