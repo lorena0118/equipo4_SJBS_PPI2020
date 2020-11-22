@@ -52,6 +52,21 @@ VALUES (?,?,?,?);`;
 
 //Petición put -- Modificar datos
 
+router.put('/Modificar/:id', (req,res) => {
+  const { nombre } = req.body
+  const { id } = req.params 
+
+mysqlConnection.query(`UPDATE usuario SET nombre = ?,  WHERE ID_TIPO = ?`,[nombre,id], (err, rows,fields) => {
+   if(!err){
+    res.json({status: `Tipo usuario ha sido actualizado con éxito`});
+   }else{
+     console.log(err);
+   }
+});
+});
+
+
+
 // Delete
 
 router.delete("/usuarios/:id", (req, res) => {
