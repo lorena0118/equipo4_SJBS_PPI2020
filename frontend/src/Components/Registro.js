@@ -1,130 +1,57 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
-import Navigation from "./Navigation";
+import "../styles.css";
 
 
 const Registro = () => {
   return (
-    <div>
-      <Navigation/>
-      <br/><br/>
+    <div className="container">
+      <h1 className="center" >Crea tu cuenta</h1>
       <div className="container">
-      <form>
-        <div className="form-group">
-          <label for="exampleInputEmail1">Nombre</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
-        </div>
-        <div className="form-group">
-          <label for="exampleInputPassword1">Contraseña</label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <div className="form-group">
-          <label for="exampleInputEmail1">Confirmar tu contraseña</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
-        </div>
-        <div className="form-group">
-          <label for="exampleInputPassword1">Edad</label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-          <center>
-           
-          </center>
-      </form>
-    </div>
-    <div className="Container"> 
-    <div className="form-check">
-  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked /> 
-  <label className="form-check-label" for="exampleRadios1">
-  Hombre
-  </label>
-</div>
-<div className="form-check">
-  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-  <label className="form-check-label" for="exampleRadios2">
-    Mujer
-  </label>
-</div>
 
-</div>
-);
-};
-    <div className="Container"> 
-    <div className="form-check">
-  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked /> 
-  <label className="form-check-label" for="exampleRadios1">
-  Hombre
-  </label>
-</div>
-<div className="form-check">
-  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-  <label className="form-check-label" for="exampleRadios2">
-    Mujer
-  </label>
-</div>
+        <form>
+          <div className="form-group">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+          </div>
 
-</div>
-);
-};
-    <div className="Container"> 
-    <div className="form-check">
-  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked /> 
-  <label className="form-check-label" for="exampleRadios1">
-  Hombre
-  </label>
-</div>
-<div className="form-check">
-  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"/>
-  <label className="form-check-label" for="exampleRadios2">
-    Mujer
-  </label>
-</div>
+          <div className="form-group">
+            <label for="exampleInputEmail1">Correo</label>
+            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+          </div>
 
-</div>
-);
-};
-</div>
- <div className="container">
- <br />
+          <div className="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" className="form-control" id="exampleInputPassword1"/>
+          </div>
  
- <button type="button" class="btn btn-primary btn-lg btn-block">
-   Ingresar
- </button>
- <br />
- <button type="button" class="btn btn-danger btn-lg btn-block">
-   Ingresar con google
- </button>
- <button type="button" class="btn btn-primary btn-lg btn-block">
-   Ingresar con facebook
- </button>
-</div>
+          <div className="form-group form-check">
+            <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+            <label className="form-check-label" for="exampleCheck1">Acepto el uso de datos</label>
+          </div>
+  
+          <button type="submit" className="btn btn-primary">Crear cuenta</button>
+        </form>
+        <div>
+          <br/>
+          <h5 className="center">
+            Ingresar con:
+          </h5>
+        </div>
+        
+        <br/>
+        <button type="button" class="btn btn-danger btn-lg btn-block">Google</button>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block">Facebook</button>
+        
+
+      </div>
+
+      <br/><br/><br/>
+    </div>
 );
 };
 
 
-);
-};
+
 export default withRouter(Registro);

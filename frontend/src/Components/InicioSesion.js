@@ -53,7 +53,7 @@ const {history} = props;
         <div className="form-group">
           <label for="uname">Correo</label>
           <input
-            type="text"
+            type="email"
             className="form-control"
             id="uname"
             placeholder="Enter email"
