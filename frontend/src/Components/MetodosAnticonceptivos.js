@@ -11,16 +11,13 @@ const MetodosAnticonceptivos = () => {
           <div className="container">
             <h1 className="display-3">Métodos anticonceptivos</h1>
             <p>
-              This is a template for a simple marketing or informational
-              website. It includes a large callout called a jumbotron and three
-              supporting pieces of content. Use it as a starting point to create
-              something more unique.
+            El método anticonceptivo es cualquier método usado para prevenir el embarazo. Otra forma de decir método anticonceptivo es "anticoncepción".
+
+            Si tiene relaciones sexuales sin métodos anticonceptivos, existe la posibilidad de que pudiera quedar embarazada. Esto es así incluso si aún no ha empezado a tener períodos menstruales o si se está acercando a la menopausia .
+
+            La única forma segura de prevenir el embarazo es no tener relaciones sexuales. Pero encontrar un buen método anticonceptivo que pueda utilizar cada vez puede ayudarla a evitar un embarazo no planeado.
             </p>
-            <p>
-              <a className="btn btn-primary btn-lg" href="/" role="button">
-                Learn more »
-              </a>
-            </p>
+            
           </div>
         </div>
 
@@ -29,10 +26,7 @@ const MetodosAnticonceptivos = () => {
             <div className="col-md-4">
               <h2>Método natural</h2>
               <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                magna mollis euismod. Donec sed odio dui.{" "}
+                La planificación familiar natural (que también se llama método del calendario de fertilidad) puede ser eficaz si usted y su pareja son muy cuidadosos. Tendrá que mantener buenos registros para saber cuándo es fértil. Y durante las épocas que sea fértil, tendrá que evitar tener relaciones sexuales o usar un método de barrera.
               </p>
               <p>
                 <Link to="metodosnaturales">
@@ -43,10 +37,7 @@ const MetodosAnticonceptivos = () => {
             <div className="col-md-4">
               <h2>Metodos Quirurjicos</h2>
               <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-                tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus. Etiam porta sem malesuada
-                magna mollis euismod. Donec sed odio dui.{" "}
+              Se realizan mediante una intervención quirúrgica en un centro sanitario. En la mujer se trata de la ligadura de las trompas y en el hombre se llama vasectomía y se interviene sobre dos conductos diferentes. Son métodos que NO PREVIENEN de las infecciones de transmisión sexual.
               </p>
               <p>
               <Link to="metodosquirurjicos">
@@ -57,10 +48,7 @@ const MetodosAnticonceptivos = () => {
             <div className="col-md-4">
               <h2>Métodos de barrera</h2>
               <p>
-                Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-                egestas eget quam. Vestibulum id ligula porta felis euismod
-                semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus.
+              incluyen condones (preservativos), diafragmas y esponjas. En general, estos no previenen el embarazo tan bien como los DIU o los métodos hormonales. Debe usar métodos de barrera cada vez que tenga relaciones sexuales.
               </p>
               <p>
               <Link to="metodosbarrera">
@@ -72,10 +60,7 @@ const MetodosAnticonceptivos = () => {
           <div className="col-md-4">
               <h2>Métodos químicos</h2>
               <p>
-                Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-                egestas eget quam. Vestibulum id ligula porta felis euismod
-                semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus.
+              También llamados métodos hormonales. Incluyen las pastillas anticonceptivas, las inyecciones, el parche cutáneo y el anillo vaginal. Los métodos anticonceptivos que utilizan hormonas son muy buenos para prevenir el embarazo. Los implantes y los DIU hormonales también usan hormonas para impedir el embarazo.
               </p>
               <p>
               <Link to="metodosquimicos">
