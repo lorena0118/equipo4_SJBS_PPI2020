@@ -68,8 +68,9 @@ const Registro = (props) => {
             <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
             <label className="form-check-label" for="exampleCheck1">Acepto el uso de datos</label>
           </div>
-  
+          <a href="/inicio">
           <button type="submit" className="btn btn-primary">Crear cuenta</button>
+          </a>
         </form>
         <div>
           <br/>
