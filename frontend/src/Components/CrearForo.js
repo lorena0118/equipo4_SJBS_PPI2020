@@ -1,12 +1,13 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
-import BotonBack from "./BotonBack";
+
 
 const CrearForo = (props) => {
   const initalState = {
     codigo:"",
-    titulo: ""
+    titulo: "",
+    descripción: ""
   }
   const[Foro, setForo] = useState(initalState)
 
@@ -31,7 +32,7 @@ const {history} = props;
   return (
     <div className="container">
       <Navigation/>
-      <BotonBack/>
+      
       <br/><br/>
       <center>
         <h1> ¡Crea tu foro! </h1>
@@ -70,22 +71,9 @@ const {history} = props;
             
           </textarea>
         </div>
+        <button type="button" className="btn btn-danger">Crear</button>
         </form>
-    <br/><br/> 
-    
-
-  <center>
-    <button 
-      type="submit" 
-      className="btn btn-outline-primary">
-        Agendar
-    </button>
-
-<br/><br/>
-<button type="button" className="btn btn-danger">Crear</button>
-</center>
-
-<br/><br/><br/><br/>
+    <br/><br/> <br/>
 </div>
   );
 };

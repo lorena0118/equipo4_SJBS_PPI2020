@@ -34,13 +34,13 @@ router.post("/usuarios", (req, res) => {
 //Peticion post - Crear foro
 
 router.post("/foro", (req, res) => {
-  const { codigo, titulo, comentario, creador } = req.body;
+  const { codigo, titulo, descripcion, comentario, descripcion, creador } = req.body;
 
-  let foro = [codigo, titulo, comentario, creador];
+  let foro = [codigo, titulo, descripcion, comentario, creador];
 
   let nuevoForo = `
-INSERT INTO foro(codigo,titulo,comentario,creador)
-VALUES (?,?,?,?);`;
+INSERT INTO foro(codigo,titulo,descripcion,comentario,creador)
+VALUES (?,?,?,?,?);`;
 
   mysqlConnection.query(nuevoForo, foro, (err, results, fields) => {
     if (err) {

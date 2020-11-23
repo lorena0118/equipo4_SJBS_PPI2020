@@ -5,7 +5,7 @@ const Navigation = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/Inicio">
+        <Link className="navbar-brand" to="/inicio">
           Sexubicate
         </Link>
         <button
@@ -23,24 +23,24 @@ const Navigation = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/Inicio">
+              <Link className="nav-link" to="/inicio">
                 Temas
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Juegos">
+              <Link className="nav-link" to="/juegos">
                 Juegos
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Foro">
+              <Link className="nav-link" to="/foro">
                 Foros
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/MiCuenta"
+                to="/micuenta"
                 tabindex="-1"
                 aria-disabled="true"
               >

@@ -79,22 +79,18 @@ const {history} = props;
           <div className="invalid-feedback">Por favor completar este campo</div>
         </div>
         <br/>
+        
+        <Link to="/inicio">
         <button
           type="submit" 
           className="btn btn-primary"
           // onClick={() => history.push("/Inicio")}
 
         >
-          Submit
+          Ingresar
         </button>
--
-        <button 
-          type="submit" 
-          className="btn btn-primary"
-          onClick={() => history.goBack("/")}
-        >
-          back
-        </button>
+        </Link>
+        
       </form>
       </center>
     </div>
