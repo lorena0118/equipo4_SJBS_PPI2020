@@ -3,26 +3,65 @@ import {Link, withRouter} from "react-router-dom";
 import "../styles.css";
 
 
-const Registro = () => {
+const Registro = (props) => {
+  const initalState = {
+    name:"",
+    correo: "",
+    contraseña:""
+  }
+  const[usuario, setUsuario] = useState(initalState)
+
+  function handlerChange(e){
+    setUsuario({...usuario, [e.target.name] : e.target.value})
+  }
+
+  function submitData(e){
+    e.preventDefault()
+    fetch('http://localhost:3001/api/usuarios', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(usuario)
+    })
+  }
+
   return (
     <div className="container">
       <h1 className="center" >Crea tu cuenta</h1>
       <div className="container">
 
-        <form>
+        <form onSubmit={submitData}>
           <div className="form-group">
             <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            <input 
+              type="text" 
+              className="form-control" 
+              id="exampleInputEmail1" 
+              aria-describedby="emailHelp"
+              onChange={(e) => handlerChange(e)}
+              />
           </div>
 
           <div className="form-group">
             <label for="exampleInputEmail1">Correo</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            <input 
+              type="email" 
+              className="form-control" 
+              id="exampleInputEmail1" 
+              aria-describedby="emailHelp"
+              onChange={(e) => handlerChange(e)}
+              />
           </div>
 
           <div className="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" className="form-control" id="exampleInputPassword1"/>
+            <input 
+              type="password" 
+              className="form-control" 
+              id="exampleInputPassword1"
+              onChange={(e) => handlerChange(e)}
+              />
           </div>
  
           <div className="form-group form-check">
