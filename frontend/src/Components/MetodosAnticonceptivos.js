@@ -35,9 +35,9 @@ const MetodosAnticonceptivos = () => {
                 magna mollis euismod. Donec sed odio dui.{" "}
               </p>
               <p>
-                <a className="btn btn-secondary" href="/" role="button">
-                Ver más »
-                </a>
+                <Link to="metodosnaturales">
+                  Ver más »
+                </Link>
               </p>
             </div>
             <div className="col-md-4">
@@ -49,9 +49,9 @@ const MetodosAnticonceptivos = () => {
                 magna mollis euismod. Donec sed odio dui.{" "}
               </p>
               <p>
-                <a className="btn btn-secondary" href="/" role="button">
-                Ver más »
-                </a>
+              <Link to="metodosquirurjicos">
+                  Ver más »
+                </Link>
               </p>
             </div>
             <div className="col-md-4">
@@ -63,9 +63,9 @@ const MetodosAnticonceptivos = () => {
                 condimentum nibh, ut fermentum massa justo sit amet risus.
               </p>
               <p>
-                <a className="btn btn-secondary" href="/" role="button">
-                Ver más »
-                </a>
+              <Link to="metodosbarrera">
+                  Ver más »
+                </Link>
               </p>
             </div>
           </div>
@@ -78,9 +78,9 @@ const MetodosAnticonceptivos = () => {
                 condimentum nibh, ut fermentum massa justo sit amet risus.
               </p>
               <p>
-                <a className="btn btn-secondary" href="/MetodosQuimicos" role="button">
+              <Link to="metodosquimicos">
                   Ver más »
-                </a>
+                </Link>
               </p>
             </div>
           </div>

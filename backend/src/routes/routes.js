@@ -3,7 +3,7 @@ const router = Router();
 
 const mysqlConnection = require("../db/db");
 
-//Peticion get - lectura de datos
+//obtención de datos - inicio sesion
 router.get("/usuarios", (req, res) => {
   mysqlConnection.query("SELECT * FROM usuario", (err, rows, fields) => {
     if (!err) {
@@ -14,7 +14,7 @@ router.get("/usuarios", (req, res) => {
   });
 });
 
-//
+// creación de cuenta
 router.post("/usuarios", (req, res) => {
   const { correo, nombre, contraseña } = req.body;
 
@@ -31,7 +31,7 @@ router.post("/usuarios", (req, res) => {
   });
 });
 
-//Peticion post - creación de datos
+//Peticion post - Crear foro
 
 router.post("/foro", (req, res) => {
   const { codigo, titulo, comentario, creador } = req.body;
@@ -50,6 +50,8 @@ VALUES (?,?,?,?);`;
   });
 });
 
+
+
 //Petición put -- Modificar datos
 router.put('/Modificar/:id', (req,res) => {
   const { nombre } = req.body
@@ -66,7 +68,7 @@ mysqlConnection.query(`UPDATE usuario SET nombre = ?,  WHERE ID_TIPO = ?`,[nombr
 
 
 
-// Delete
+// Delete - eliminar cuenta
 
 router.delete("/usuarios/:id", (req, res) => {
   const { id } = req.params;

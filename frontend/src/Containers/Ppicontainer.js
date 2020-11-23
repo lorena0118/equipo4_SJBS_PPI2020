@@ -43,8 +43,8 @@ export default function Ppicontainer() {
       <Route path="/registro" component={Registro} />
       <Route path="/metodosbarrera" component={MetodosBarrera} />
       <Route path="/ingresarforo" component={IngresarForo} />
-      <Route path="/MetodosNaturales" component={MetodosNaturales} />
-      <Route path="/MetodosQuirurjicos" component={MetodosQuirurjicos} />
+      <Route path="/metodosnaturales" component={MetodosNaturales} />
+      <Route path="/metodosquirurjicos" component={MetodosQuirurjicos} />
       </BrowserRouter>
   );
 }
