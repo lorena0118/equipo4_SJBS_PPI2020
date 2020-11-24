@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
 
@@ -9,10 +9,10 @@ const CrearForo = (props) => {
     titulo: "",
     descripción: ""
   }
-  const[Foro, setForo] = useState(initalState)
+  const[foro, setForo] = useState(initalState)
 
   function handlerChange(e){
-    setForo({...Foro, [e.target.codigo] : e.target.value})
+    setForo({...foro, [e.target.codigo] : e.target.value})
   }
 
   function submitData(e){

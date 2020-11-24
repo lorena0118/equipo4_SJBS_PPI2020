@@ -15,7 +15,7 @@ const InicioSesion = (props) => {
     setUsuario({...usuario, [e.target.name] : e.target.value})
   }
 
-  function submitData(e){
+  async function submitData(e){
     e.preventDefault()
     fetch('http://localhost:3001/api/usuarios', {
       method: 'POST',
@@ -24,6 +24,8 @@ const InicioSesion = (props) => {
       },
       body: JSON.stringify(usuario)
     })
+    setUsuario("")
+    window.location.href = 'http://localhost:3000/inicio'
   }
 
 const {history} = props;
@@ -80,16 +82,12 @@ const {history} = props;
         </div>
         <br/>
         
-        <Link to="/inicio">
         <button
           type="submit" 
           className="btn btn-primary"
-          // onClick={() => history.push("/Inicio")}
-
         >
           Ingresar
         </button>
-        </Link>
         
       </form>
       </center>

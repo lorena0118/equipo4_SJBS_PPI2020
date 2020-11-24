@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const mysqlconnection = require("../db/db");
 const router = Router();
 
 const mysqlConnection = require("../db/db");
@@ -20,21 +21,32 @@ router.post("/usuarios", (req, res) => {
 
   let cuenta = [correo, nombre, contraseña];
 
-  let nuevaCuenta = `INSERT INTO usuario(correo,nombre,contraseña)
-    VALUES (?,?,?);`;
-
-  mysqlConnection.query(nuevaCuenta, cuenta, (err, results, fields) => {
-    if (err) {
-      console.error(err.message);
+  let usuarioEncontrado = `Select * FROM usuario WHERE correo = ?`
+  mysqlconnection.query(usuarioEncontrado, correo, (err, rows, fields) => {
+    if(err){
+      console.log(err)
     }
-    return res.json({ message: 'usuario creado', success: true, status: 201 }).status(201);
-  });
+    if(rows.length > 0){
+      console.log('Usuario ya existe')
+      res.json({message: "el usuario ya existe", success: false, code: 300})
+    } else {
+      let nuevaCuenta = `INSERT INTO usuario(correo,nombre,contraseña)
+        VALUES (?,?,?);`;
+    
+      mysqlConnection.query(nuevaCuenta, cuenta, (err, results, fields) => {
+        if (err) {
+          console.error(err.message);
+        }
+        return res.json({ message: 'usuario creado', success: true, status: 201 }).status(201);
+      });
+    }
+  })
 });
 
 //Peticion post - Crear foro
 
 router.post("/foro", (req, res) => {
-  const { codigo, titulo, descripcion, comentario, descripcion, creador } = req.body;
+  const { codigo, titulo, descripcion, comentario, creador } = req.body;
 
   let foro = [codigo, titulo, descripcion, comentario, creador];
 
