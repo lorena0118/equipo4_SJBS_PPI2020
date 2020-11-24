@@ -29,7 +29,7 @@ const MetodosAnticonceptivos = () => {
                 La planificación familiar natural (que también se llama método del calendario de fertilidad) puede ser eficaz si usted y su pareja son muy cuidadosos. Tendrá que mantener buenos registros para saber cuándo es fértil. Y durante las épocas que sea fértil, tendrá que evitar tener relaciones sexuales o usar un método de barrera.
               </p>
               <p>
-                <Link to="metodosnaturales">
+                <Link to="/MetodosNaturales">
                   Ver más »
                 </Link>
               </p>
@@ -40,7 +40,7 @@ const MetodosAnticonceptivos = () => {
               Se realizan mediante una intervención quirúrgica en un centro sanitario. En la mujer se trata de la ligadura de las trompas y en el hombre se llama vasectomía y se interviene sobre dos conductos diferentes. Son métodos que NO PREVIENEN de las infecciones de transmisión sexual.
               </p>
               <p>
-              <Link to="metodosquirurjicos">
+              <Link to="/MetodosQuirurjicos">
                   Ver más »
                 </Link>
               </p>
@@ -51,7 +51,7 @@ const MetodosAnticonceptivos = () => {
               incluyen condones (preservativos), diafragmas y esponjas. En general, estos no previenen el embarazo tan bien como los DIU o los métodos hormonales. Debe usar métodos de barrera cada vez que tenga relaciones sexuales.
               </p>
               <p>
-              <Link to="metodosbarrera">
+              <Link to="/MetodosBarrera">
                   Ver más »
                 </Link>
               </p>
@@ -63,7 +63,7 @@ const MetodosAnticonceptivos = () => {
               También llamados métodos hormonales. Incluyen las pastillas anticonceptivas, las inyecciones, el parche cutáneo y el anillo vaginal. Los métodos anticonceptivos que utilizan hormonas son muy buenos para prevenir el embarazo. Los implantes y los DIU hormonales también usan hormonas para impedir el embarazo.
               </p>
               <p>
-              <Link to="metodosquimicos">
+              <Link to="/MetodosQuimicos">
                   Ver más »
                 </Link>
               </p>

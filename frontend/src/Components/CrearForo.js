@@ -22,8 +22,10 @@ const CrearForo = (props) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(foro)
+      body: JSON.stringify(foro) 
     })
+    setForo("")
+    window.location.href = 'http://localhost:3000/IngresarForo'
   }
 
 const {history} = props;
@@ -71,7 +73,7 @@ const {history} = props;
             
           </textarea>
         </div>
-        <button type="button" className="btn btn-danger">Crear</button>
+        <button type="submit" className="btn btn-danger">Crear</button>
         </form>
     <br/><br/> <br/>
 </div>

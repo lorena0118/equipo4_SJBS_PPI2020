@@ -28,34 +28,46 @@ const Ets = () => {
           <br />
           <br />
           <div className="row">
-            <div className="col">
-              <center> Clamidia </center>
-            </div>
-            <div className="col">
-              <center> Verrugas genitales</center>
-            </div>
+          <Link to="/Clamidia">
+              <div className="col">
+                <center> Clamidia  </center>
+              </div>
+            </Link>
+            <Link to="/VerrugasGenitales">
+              <div className="col">
+                <center>  Verrugas genitales </center>
+              </div>
+            </Link>
             <div className="w-100">
               <p></p>
               <hr />
               <hr />
             </div>
-            <div className="col">
-              <center> Gonorrea </center>
-            </div>
-            <div className="col">
-              <center> Hepatitis B</center>
-            </div>
+            <Link to="/Gonorrea">
+              <div className="col">
+                <center>  Gonorrea</center>
+              </div>
+            </Link>
+            <Link to="/HepatitisB">
+              <div className="col">
+                <center> Hepatitis B</center>
+              </div>
+            </Link>
             <div className="w-100">
               <p></p>
               <hr />
               <hr />
             </div>
-            <div className="col">
-              <center> Herpes </center>
-            </div>
-            <div className="col">
-              <center> VIH - Sida</center>
-            </div>
+            <Link to="/Herpes">
+              <div className="col">
+                <center>  Herpes  </center>
+              </div>
+            </Link>
+            <Link to="/VihSida">
+              <div className="col">
+                <center>  VIH - sida </center>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import Navigation from "./Navigation";
 import "../styles.css";
 
@@ -15,7 +15,7 @@ const Clamidia = () => {
           <br />
          
           
-          <img className="imagen" src="../img/Chlamydia.jpg"/>
+          <img className="imagen" src="../img/CLAMIDIA.jpg"/>
           
           <br />
           <br />|
@@ -59,7 +59,7 @@ const Clamidia = () => {
               
 
               
-                <img className="imagen" src="../img/clamidia.png"/>
+                <img className="imagen" src="../img/CLAMIDIA2.jfif"/>
              
       
           </div> 

@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
 
 const MetodosQuimicos = () => {
@@ -28,7 +28,7 @@ const MetodosQuimicos = () => {
         <br/>
         <br/>
 
-        <img className="imagen" src="../img/JADELLE.PNG"/>
+        <img className="imagen" src="../img/JADELLE.PNG"  alt=""/>
 
         <br/>
 
@@ -50,7 +50,7 @@ const MetodosQuimicos = () => {
         
         <img
           src="https://revistas.elheraldo.co/sites/default/files/styles/640x360/public/2013/10/16/articulo/84278-95417515.jpg?itok=x3yqqcRP"
-          width="350px"
+          width="350px" alt=""
         />
       
         <br/><br/><br/>
@@ -62,7 +62,7 @@ const MetodosQuimicos = () => {
             <br/><br/><br/><br/>
         <img
           src="https://ichef.bbci.co.uk/news/410/cpsprodpb/E89F/production/_99115595_1.jpg"
-          width="350px"
+          width="350px" alt=""
         />
         <br/><br/><br/><br/>
         <h1>VIDEOS</h1>

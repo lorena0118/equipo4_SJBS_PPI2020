@@ -38,7 +38,7 @@ const Temas = () => {
           />
         </div>
         </Link>
-        <Link className="nav-link" to="/">
+        <Link className="nav-link" to="/LineasAmigas">
         <div className="col">
           <img
             src="../img/lineas atencion.png"

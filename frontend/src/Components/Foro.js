@@ -13,7 +13,7 @@ const Foro = () => {
       <h1>¿Tú que opinas?</h1>
       <p className="lead text-muted">Un pequeño espacio para que expreses lo que piensas con respetoa algún tema plantado. Ó crea tu foro y compartelo con tus amigos. </p>
       <p>
-        <a href="/CrearForo" className="btn btn-primary my-2">Crear Foro</a>
+        <Link to="/CrearForo" className="btn btn-primary my-2">Crear Foro</Link>
         
       </p>
     </div>
