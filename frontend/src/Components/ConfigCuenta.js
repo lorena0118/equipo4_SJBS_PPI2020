@@ -1,12 +1,10 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
-import BotonBack from "./BotonBack";
 
 const ConfigCuenta = () => {
   return (
     <div>
-      
-  <BotonBack/>    
+         
   <div className="container">
       <br />
       <div className="row">

@@ -1,13 +1,11 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
-import BotonBack from "./BotonBack";
 
 const Embarazo = () => {
   return (
     <div >
       <Navigation/>
-      <BotonBack/>
       <div className="container"> 
       <br/>
       <center><h1>Embarazo</h1></center>

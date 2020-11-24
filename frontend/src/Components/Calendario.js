@@ -1,14 +1,12 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
-import BotonBack from "./BotonBack";
 
 const Calendario = () => {
   return (
     <div>
       <Navigation/>
       <br/>
-      <BotonBack/>
       <div class="container">
         <br />
         <br />

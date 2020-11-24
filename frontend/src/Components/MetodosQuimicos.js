@@ -1,7 +1,6 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
-import BotonBack from "./BotonBack";
 
 const MetodosQuimicos = () => {
   return (

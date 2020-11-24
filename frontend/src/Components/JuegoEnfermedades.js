@@ -1,14 +1,12 @@
 import React from "react";
 import {Link, withRouter} from "react-router-dom";
 import Navigation from "./Navigation";
-import BotonBack from "./BotonBack";
 
 const JuegoEnfermedades = () => {
   return (
     
 <div>
 <Navigation/>
-<BotonBack/>
 
 <center>
       <h1> ¡Enfermedades de transmicion sexual! </h1>
